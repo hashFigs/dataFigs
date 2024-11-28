@@ -1,7 +1,7 @@
 /* Default styles for the navbar */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px 15px;
 }
@@ -11,6 +11,8 @@
     display: flex;
     margin: 0;
     padding: 0;
+    justify-content: center;
+    margin: 0 auto; 
 }
 
 .menu li {
@@ -44,6 +46,14 @@
     display: flex; 
     flex-direction: column; 
     min-height: 100vh; 
+    box-sizing: border-box; 
+    padding: 20px; 
+}
+.headerContainer {
+    width: 40%; 
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: column; 
     box-sizing: border-box; 
     padding: 20px; 
 }
@@ -94,6 +104,14 @@ body {
         display: flex; 
         flex-direction: column; 
         min-height: 100vh; 
+        box-sizing: border-box; 
+        padding: 20px; 
+    }
+    .headerContainer {
+        width: 100%; 
+        margin: 0; 
+        display: flex; 
+        flex-direction: column;  
         box-sizing: border-box; 
         padding: 20px; 
     }
