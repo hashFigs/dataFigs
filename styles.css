@@ -59,7 +59,7 @@ body {
     align-items: stretch; /* Align both items to fill the height */
     background-color: #f8f9fa; /* Adjust the background color as needed */
     height: auto;
-    border-bottom: 2px solid #ddd;
+   
 }
 
 /* Logo Styling */
@@ -76,13 +76,18 @@ body {
         flex-direction: column;
         background: #333;
         position: absolute;
-        top: 100%;
+        top: 20%;
         right: 10px;
         width: 200px;
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     }
-    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 0px;
+    }
     .mainContainer {
         width: 100%; 
         margin: 0; 
@@ -100,7 +105,8 @@ body {
 
     .menu-toggle {
         display: block;
-        color: black
+        color: #36c4ab;
+       
     }
 
     .menu.active {
@@ -109,12 +115,16 @@ body {
 
     /* Logo adjustments for smaller screens */
     .header-container {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
     .logo {
-        height: auto; /* Adjust to fit smaller headers */
-        max-width: 100%; /* Ensure it doesn't overflow */
+        height: 100px; 
+        max-width: 100%; 
+        margin-right: 20px;
+    }
+    .content {
+        margin-left: 20px; 
     }
 }

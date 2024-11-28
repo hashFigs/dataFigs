@@ -26,8 +26,7 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-        </div>
-        
+        </div> 
     </header>
     
     <!-- About Me -->
@@ -76,9 +75,26 @@
         document.addEventListener("DOMContentLoaded", () => {
             const toggleButton = document.querySelector(".menu-toggle");
             const menu = document.querySelector(".menu");
-    
-            toggleButton.addEventListener("click", () => {
+        
+            // Toggle menu visibility on button click
+            toggleButton.addEventListener("click", (event) => {
+                event.stopPropagation(); // Prevent the click from propagating to the document
                 menu.classList.toggle("active");
+            });
+        
+            // Close the menu when clicking outside of it
+            document.addEventListener("click", (event) => {
+                if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
+                    menu.classList.remove("active");
+                }
+            });
+        
+            // Close the menu after clicking a menu item
+            const menuItems = document.querySelectorAll(".menu li a");
+            menuItems.forEach((item) => {
+                item.addEventListener("click", () => {
+                    menu.classList.remove("active");
+                });
             });
         });
     </script>
