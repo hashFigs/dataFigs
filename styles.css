@@ -1,0 +1,110 @@
+/* Default styles for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu a {
+    color: #36c4ab;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.menu a:hover {
+    text-decoration: underline; 
+    border-radius: 5px;
+}
+
+/* Hide the menu toggle button by default */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.mainContainer {
+    width: 60%; 
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+    box-sizing: border-box; 
+    padding: 20px; 
+}
+
+body {
+    font-family: "JetBrains Mono", monospace;
+}
+
+/* Header container */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Space between text and image */
+    align-items: stretch; /* Align both items to fill the height */
+    background-color: #f8f9fa; /* Adjust the background color as needed */
+    height: auto;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Logo Styling */
+.logo {
+    width: auto; 
+    height: 150px; /* Match the combined header + navbar height */
+    object-fit: contain;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 100%;
+        right: 10px;
+        width: 200px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .menu li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: black
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    /* Logo adjustments for smaller screens */
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        height: auto; /* Adjust to fit smaller headers */
+        max-width: 100%; /* Ensure it doesn't overflow */
+    }
+}
